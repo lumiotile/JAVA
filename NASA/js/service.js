@@ -20,11 +20,14 @@ fetch(apiUrl)
     data.photos.forEach(element => {
       var newDiv = document.createElement('div');
       var newImg = document.createElement('img');
+      var newText = document.createElement ('p')
       newDiv.className = 'divImagenes';
       newImg.className = 'imagenes'
       document.getElementById('container').appendChild(newDiv);
       newImg.src = data.photos[cont].img_src;
+      newText.innerHTML = data.photos[cont].earth_date;
       newDiv.appendChild(newImg);
+      newDiv.appendChild(newText);
       cont++;
 
     });
